@@ -183,28 +183,30 @@ export default function DashboardPage() {
               <h3 className="text-lg font-semibold">Progresso de Peso</h3>
               <Button variant="ghost" size="sm">Ver Mais</Button>
             </div>
-            <ResponsiveContainer width="100%" height={300}>
-              <LineChart data={progressData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Line 
-                  type="monotone" 
-                  dataKey="peso" 
-                  stroke="#1ab894" 
-                  strokeWidth={2}
-                  dot={{ fill: '#1ab894' }}
-                />
-                <Line 
-                  type="monotone" 
-                  dataKey="meta" 
-                  stroke="#ef4444" 
-                  strokeDasharray="5 5"
-                  strokeWidth={2}
-                />
-              </LineChart>
-            </ResponsiveContainer>
+            {ResponsiveContainer && (
+              <ResponsiveContainer width="100%" height={300}>
+                <LineChart data={progressData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Line
+                    type="monotone"
+                    dataKey="peso"
+                    stroke="#1ab894"
+                    strokeWidth={2}
+                    dot={{ fill: '#1ab894' }}
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="meta"
+                    stroke="#ef4444"
+                    strokeDasharray="5 5"
+                    strokeWidth={2}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            )}
           </Card>
         </motion.div>
 
