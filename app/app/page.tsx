@@ -15,7 +15,7 @@ import { useAuth } from '@/context/AuthContext';
 import { useGameification } from '@/hooks/useGameification';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { formatXP, calculateLevel, getXPForNextLevel } from '@/lib/utils';
 
 // Mock data for charts
