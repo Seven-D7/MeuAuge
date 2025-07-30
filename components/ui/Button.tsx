@@ -28,6 +28,19 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       lg: 'px-6 py-3 text-lg',
     };
 
+    if (asChild) {
+      return (
+        <motion.div
+          className={cn(baseClasses, variants[variant], sizes[size], className)}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          {...props}
+        >
+          {children}
+        </motion.div>
+      );
+    }
+
     return (
       <motion.button
         ref={ref}
