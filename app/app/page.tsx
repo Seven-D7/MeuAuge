@@ -15,7 +15,7 @@ import { useAuth } from '@/context/AuthContext';
 import { useGameification } from '@/hooks/useGameification';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { formatXP, calculateLevel, getXPForNextLevel } from '@/lib/utils';
 
 // Mock data for charts
@@ -183,28 +183,12 @@ export default function DashboardPage() {
               <h3 className="text-lg font-semibold">Progresso de Peso</h3>
               <Button variant="ghost" size="sm">Ver Mais</Button>
             </div>
-            <ResponsiveContainer width="100%" height={300}>
-              <LineChart data={progressData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Line 
-                  type="monotone" 
-                  dataKey="peso" 
-                  stroke="#1ab894" 
-                  strokeWidth={2}
-                  dot={{ fill: '#1ab894' }}
-                />
-                <Line 
-                  type="monotone" 
-                  dataKey="meta" 
-                  stroke="#ef4444" 
-                  strokeDasharray="5 5"
-                  strokeWidth={2}
-                />
-              </LineChart>
-            </ResponsiveContainer>
+            <div style={{ width: '100%', height: 300 }}>
+              {/* Chart will be implemented later */}
+              <div className="flex items-center justify-center h-full bg-gray-50 rounded">
+                <p className="text-gray-500">Chart coming soon</p>
+              </div>
+            </div>
           </Card>
         </motion.div>
 
